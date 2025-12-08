@@ -1,0 +1,16 @@
+<!-- views/books/show.ejs -->
+
+<h1><%= book.title %></h1>
+<p><strong>Author:</strong> <%= book.author %></p>
+<p><strong>Published:</strong> <%= book.isPublished ? "Yes" : "No" %></p>
+
+<!-- Link to edit the book -->
+<a href="/books/<%= book._id %>/edit">Edit</a>
+
+<!-- Delete form -->
+<form action="/books/<%= book._id %>?_method=DELETE" method="POST" style="display:inline;">
+  <button type="submit">Delete</button>
+</form>
+
+<br>
+<a href="/books">Back to all books</a>

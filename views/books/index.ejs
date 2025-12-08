@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Books</title>
+</head>
+<body>
+  <h1>All Books</h1>
+  <ul>
+    <% books.forEach(book => { %>
+      <li>
+        <strong>Title:</strong> <%= book.title %> |
+        <strong>Author:</strong> <%= book.author %> |
+        <strong>Published:</strong> <%= book.isPublished ? "Yes" : "No" %>
+      </li>
+    <% }) %>
+  </ul>
+  <p><a href="/books/new">Add a New Book</a></p>
+</body>
+</html>
