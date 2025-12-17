@@ -8,11 +8,12 @@
   <h1>All Books</h1>
   <ul>
     <% books.forEach(book => { %>
+      <a href="/books/<%= book._id %>">
       <li>
         <strong>Title:</strong> <%= book.title %> |
         <strong>Author:</strong> <%= book.author %> |
         <strong>Published:</strong> <%= book.isPublished ? "Yes" : "No" %>
-      </li>
+      </li></a>
     <% }) %>
   </ul>
   <p><a href="/books/new">Add a New Book</a></p>
